@@ -3,20 +3,33 @@
     padding: 0;
 }
 
+:root{
+    --cor--fonte--:#1D87AB;
+    --cor--text--:#1B7D9E;
+    --cor--fundo--:#053B50;
+    --cor--botao--:#1B7D9E;
+    
+}
+
 #titulo{
     font-family: sans-serif;
-    color:#380b61;
-    margin-left: 7%;
+    color:var(--cor--fonte--);
+    margin-left: 22%;
 }
 
 #subtitulo{
     font-family: sans-serif;
-    color: #380b61;
-    margin-left: 10%;
+    color:var(--cor--fonte--);
+    margin-left: 28%;
 }
 
 #check{
     display: inline-block;
+}
+
+.principal{
+    height: 100vh;
+    margin-top: 2%;
 }
 
 fieldset{
@@ -24,19 +37,20 @@ fieldset{
 }
 
 body{
-    background-color:#F0F8FF;
+    background-color:var(--cor--fundo--);
     font-family: sans-serif;
     font-size: 1em;
-    color: #59429d;
-    margin-left: 36%;
-    margin-top: 2%;
+    color: var(--cor--text--);
+    display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 input, select, textarea, button {
     font-family: sans-serif;
     font-size: 1em;
-    color: #59429d;
+    color: black;
     border-radius: 5px;
 }
 
@@ -54,7 +68,7 @@ input, select, textarea, button {
 
 .campo label {
     margin-bottom: 0.2em;
-    color: #59429d;
+    color: var(--cor--text--);
     display:block;
 }
 
@@ -65,7 +79,7 @@ fieldset.grupo .campo{
 
 .campo input[type="text"], .campo input[type="email"], .campo select, .campo textarea {
     padding: 0.2em;
-    border: 1px solid #59429d;
+    border: 1px solid black;
     box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
     display: block;
 }
@@ -80,18 +94,14 @@ fieldset.grupo .campo{
 
 .botao {
     font-size: 1.2em;
-    background: #59429d;
+    background: var(--cor--botao--);
     border: 0;
     margin-bottom: 1em;
     color: #ffffff;
     padding: 0.2em 0.6em;
     box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
     text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
+    margin-left: 35%;
 }
 
 
@@ -103,4 +113,39 @@ fieldset.grupo .campo{
 
 .botao, select{
     cursor: pointer;
+}
+
+section{
+    width: 100%;
+}
+
+.rodape{
+        background-color: #176B87;
+        color: white;
+        padding: 1em ;
+        text-align: center;
+        font-family: sans-serif;
+}
+
+@media (max-width: 1000px){
+    .principal{
+        margin-left: 4%;
+    }
+    body{
+        width: auto;
+
+    }
+
+    section{
+        width: 100%;
+    }
+
+    
+.rodape{
+    background-color: #176B87;
+    color: white;
+    padding: 1em ;
+    text-align: center;
+    font-family: sans-serif;
+}
 }
